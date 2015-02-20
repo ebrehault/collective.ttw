@@ -50,6 +50,10 @@ Regarding the `get_description` function, it could be called from a template lik
 <div tal:content="python:context.unrestrictedTraverse('@@ttw/myviews').get_description(context.news)" />
 ```
 
+## File-system / TTW round trip
+
+Everything is managed in our Diazo theme, TTW defined items can be exported and then stored in an actual Plone module in the `/static` folder.
+
 ## Implementation
 
 ### Security
