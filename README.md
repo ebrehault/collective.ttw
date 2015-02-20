@@ -18,7 +18,9 @@ collective.ttw proposes to use massively the Plone theming editor to customize n
 
 ### Regular Plone views
 
-Templates contained in the `/overrides` folder would be editable using the theming editor and would be plugged properly in `z3c.jbot`.
+- Templates contained in the `/overrides` folder would be editable using the theming editor and would be plugged properly in `z3c.jbot`.
+
+- A more user-friendly approach could be to enable content-to-content transformation in Diazo, so any part of a Plone page could be easily replaced by a custom view (see below).
 
 ### Custom views
 
@@ -41,6 +43,12 @@ Then we can get the menu resulting html by accessing `./@@ttw/myviews/menu`, and
 ```xml
 <replace 
     css:theme="#menu"
+    href="./@@ttw/myviews/menu" />
+```
+In content-to-content mode:
+```xml
+<replace 
+    css:content="#portal-siteactions"
     href="./@@ttw/myviews/menu" />
 ```
 It could also be inserted as a portlet.
